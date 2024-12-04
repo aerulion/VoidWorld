@@ -1,0 +1,68 @@
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/inspectionProfiles
+.idea/**/shelf
+.idea/**/sonarlint
+.idea/**/modules
+.idea/*.xml
+
+# AWS User-specific
+.idea/**/aws.xml
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+*.iml
+*.ipr
+*.iws
+
+# IntelliJ
+out/
+
+# Compiled class file
+*.class
+
+target/
+
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
+
+#Ignore for GitHub actions
+settings.xml
+toolchains.xml
+
+# Common working directory
+build
+.gradle
+/*.jar
+
+.DS_Store
+
+~$*.xlsx
+
+logs/
