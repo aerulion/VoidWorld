@@ -2,27 +2,29 @@ import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 
 plugins {
     `java-library`
-    id("net.minecrell.plugin-yml.paper") version "0.6.0"
+    id("de.eldoria.plugin-yml.paper") version "0.7.1"
     id("maven-publish")
 }
+
+// Version constants
+val javaVersion = 21
+val minecraftVersion = "1.21.7"
+val adventureVersion = "4.23.0"
 
 group = "net.aerulion"
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(javaVersion))
     withSourcesJar()
     withJavadocJar()
 }
 
 repositories {
-    mavenLocal()
-    maven {
-        url = uri("https://papermc.io/repo/repository/maven-public/")
-    }
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.3-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:$minecraftVersion-R0.1-SNAPSHOT")
     compileOnly("org.jetbrains:annotations:26.0.1")
 }
 
@@ -34,8 +36,8 @@ tasks {
     javadoc {
         options.encoding = Charsets.UTF_8.name()
         (options as StandardJavadocDocletOptions).links(
-            "https://jd.papermc.io/paper/1.21.3/",
-            "https://jd.advntr.dev/api/4.17.0/"
+            "https://jd.papermc.io/paper/$minecraftVersion/",
+            "https://jd.advntr.dev/api/$adventureVersion/"
         )
     }
     processResources {
@@ -75,5 +77,5 @@ paper {
     version = getVersion().toString()
     load = BukkitPluginDescription.PluginLoadOrder.STARTUP
     authors = listOf("aerulion")
-    apiVersion = "1.21.3"
+    apiVersion = minecraftVersion
 }
