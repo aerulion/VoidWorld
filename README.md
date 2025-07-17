@@ -37,7 +37,7 @@ Similar to creating a new world, you also need to specify the generator when imp
 
 To modify the generator of an existing world in Multiverse, you need to edit the `worlds.yml` file in the Multiverse plugin directory.
 
-Look for the world name you want to modify and change the value of the 'generator' field.
+Look for the world name you want to modify and change the value of the `generator` field.
 
 ```yaml
 world_1:
