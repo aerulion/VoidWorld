@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Fetch latest tag
         id: latesttag
-        uses: WyriHaximus/github-action-get-previous-tag@v1
+        uses: WyriHaximus/github-action-get-previous-tag@v2
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
