@@ -2,7 +2,7 @@ import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 
 plugins {
     `java-library`
-    id("de.eldoria.plugin-yml.paper") version "0.7.1"
+    id("de.eldoria.plugin-yml.paper") version "0.9.0"
     id("maven-publish")
 }
 
